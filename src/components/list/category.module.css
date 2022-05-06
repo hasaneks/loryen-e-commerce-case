@@ -1,0 +1,36 @@
+.categoriesContainer {
+  .categoryButtonsContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin-top: 10px;
+  }
+
+  .categoryTitleContainer{
+    display: flex;
+    align-items: center;
+    margin-top:15px;
+    margin-bottom: 10px;
+    color: #044DC3;
+
+    p{
+      font-size: 1.5rem;
+      margin-left: 7px;
+      margin-top: -4px;
+    }
+  }
+}
+
+@media (--p){
+  .categoriesContainer {
+    .categoryButtonsContainer {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x proximity;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+}
+
+

@@ -1,0 +1,39 @@
+.buttonContainer {
+  padding: 14px 35px;
+  border-radius: var(--s-radius);
+  background-color: transparent;
+  border: 1px solid #e2e7e9;
+  font-weight: 600;
+  color: #707070;
+  scroll-snap-stop: normal;
+
+  &:hover {
+    background-color: rgba(var(--primary-color),0.8);
+    color: #fff;
+  }
+
+}
+
+.active{
+  background-color: rgb(var(--primary-color));
+  color: #fff;
+  &:hover{
+    background-color: rgb(var(--primary-color));;
+  }
+}
+
+@media (--d){
+  .buttonContainer{
+    span{
+      min-width: auto;
+    }
+  }
+}
+
+@media (--p){
+  .buttonContainer{
+    span{
+      min-width: 125px;
+    }
+  }
+}

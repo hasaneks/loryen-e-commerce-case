@@ -1,0 +1,105 @@
+.productContainer{
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--s-radius);
+  border: 1px solid #E2E7E9;
+  padding: 15px;
+  flex-basis: 20%;
+  .productImg{
+    width: 100%;
+    height: 250px;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      border-radius: var(--s-radius);
+    }
+  }
+
+  .productContent{
+    font-weight: 600;
+    .productName{
+      color: #555555;
+      font-size: 1rem;
+      margin-top: 4px;
+      margin-bottom: 4px;
+     height: 40px;
+      display: -webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      overflow: hidden;
+      text-overflow:ellipsis;
+    }
+    .freeDelivery{
+      color: #51B549;
+      font-size: 0.8rem;
+      margin-bottom: 3px;
+      height: 20px;
+    }
+    span{
+      font-size: 0.9rem;
+      margin-bottom: 3px;
+      height: 20px;
+    }
+  }
+
+  .addBasketButton{
+    margin-top: 5px;
+
+    .baseButton{
+      width: 100%;
+      border-radius: var(--l-radius);
+      transition: 300ms all;
+      background-color: transparent;
+      height: 40px;
+    }
+
+    .firstButton{
+      border: 1px solid rgb(var(--primary-color));
+      color:rgb(var(--primary-color));
+      padding: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+
+      &:hover{
+        background-color: rgb(var(--primary-color));
+        color: #fff;
+      }
+    }
+
+    .counterButton{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border:1px solid #E2E7E9;
+      padding: 5px;
+
+      button{
+        background-color: #D6E6FF;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+
+        span{
+          font-size: 1.8rem;
+          font-weight: 300;
+          color: rgb(var(--primary-color));
+        }
+      }
+    }
+    .quantityText{
+      font-size: 1.3rem;
+      font-weight: 600;
+      color:#555;
+    }
+  }
+}
+
+@media (--p){
+  .productContainer {
+    .productImg{
+      width: 100%;
+      height: 200px;
+    }
+  }
+  }

@@ -1,0 +1,135 @@
+.appBannerContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 110px;
+  height: 220px;
+
+  &:hover {
+    .imgWrapper {
+      img {
+        transform: scale(1.1) translateX(-20px) translateY(-20px);
+      }
+    }
+  }
+}
+
+.imgWrapper {
+  height: 360px;
+  width: 350px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 300ms transform;
+  }
+}
+
+.contentWrapper {
+  align-self: center;
+  margin-left: 40px;
+  .qrWrapper {
+    display: flex;
+
+    img {
+      object-fit: cover;
+      height: 60px;
+      width: 60px;
+    }
+
+    .textWrapper {
+      margin-left: 20px;
+      color: #000;
+
+      p {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      span {
+        font-size: 0.9rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .buttonWrapper {
+    display: flex;
+    margin-top: 30px;
+    height: 52px;
+
+    a {
+      background-color: transparent;
+
+      img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        transition: 300ms transform;
+      }
+
+      &:first-child {
+        margin-right: 12px;
+      }
+
+      &:hover > img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+@media (--p) {
+  .appBannerContainer {
+    flex-direction: column;
+    position: relative;
+    border-radius: var(--l-radius);
+    padding-top: 50px;
+    padding-bottom: 25px;
+    height: auto;
+
+    &:hover {
+      .imgWrapper {
+        img {
+          transform: scale(1) translateX(0) translateY(0);
+        }
+      }
+    }
+  }
+
+  .imgWrapper {
+    height: 150px;
+    width: 150px;
+    left: 50%;
+    position: absolute;
+    bottom: 90%;
+    transform: translateX(-50%);
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      transition: 300ms transform;
+    }
+  }
+  .contentWrapper {
+    margin-left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    .qrWrapper {
+      align-items: center;
+    }
+
+    .buttonWrapper {
+      height: auto;
+      justify-content: space-between;
+
+      a {
+        height: 40px;
+      }
+    }
+  }
+}

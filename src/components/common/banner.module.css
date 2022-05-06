@@ -1,0 +1,42 @@
+.bannerContainer {
+  height: 150px;
+  padding: 10px;
+  background-color: #000;
+  border-radius: var(--s-radius);
+}
+
+.imgWrapper {
+  width: 165px;
+  height: 130px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--s-radius);
+  }
+}
+
+.contentWrapper {
+  margin-left: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .title {
+    color: #707070;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  a {
+    background-color: #fff;
+    padding: 6px 17px;
+    font-size: 0.8rem;
+    color: #E64E41;
+    border-radius: var(--m-radius);
+    flex-basis: 15%;
+    font-weight: 600;
+  }
+}

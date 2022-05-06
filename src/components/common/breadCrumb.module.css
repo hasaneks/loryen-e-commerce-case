@@ -1,0 +1,33 @@
+.nav {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #555555;
+
+  a {
+    position: relative;
+    padding-right: 5px;
+
+    &:last-child {
+      color: #51b549;
+    }
+  }
+
+  a + a {
+    padding-left: 10px;
+    &:before {
+      content: '>';
+      color: #555555;
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+@media (--p) {
+  .nav {
+    font-size: 0.8rem;
+  }
+}
